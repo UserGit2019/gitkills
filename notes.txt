@@ -1,0 +1,26 @@
+每日学习（2019/4/15）
+C++：
+1、STL：Set map 自动排序
+MFC:
+1、Listctrl：防止闪烁 SetReDraw(fasle):禁止重画  填充数据 SetReDraw(true)  ：恢复重画  立即重画：invalid（）
+2、网络客户端的应用实现 http ftp
+3、使应用程序只能运行一个实例
+Git：
+命令：Git config --global user.name ""
+          Git config --global mail.name ""
+          Git Init
+          Git Add   Git commit -m "" 
+4、添加远程库
+因为远程库中已经存在readme文件了，所以需要先pull下来。命令如下：
+$ git pull origin master
+
+这时又会报错：
+From https://github.com/daoke0818/testGit
+
+branch master -> FETCH_HEAD fatal: refusing to merge unrelated histories
+说这两个库有不相干的历史记录而无法合并，这时我们可以加上一个参数 --allow-unrelated-histories  即可成功pull：
+$ git pull origin master --allow-unrelated-histories
+
+但是这时会可能会提示必须输入提交的信息，默认会打开vim编辑器，先按 i 切换到插入模式，写完后 Esc→：→wq 即可保存退出编辑器。
+如果不进入vim编辑器，则会自动生成一个合并代码的commit。然后再使用前面的命令push将本地提交推送到远程仓库。
+后面如果本地还有commit，就可以直接用 git push origin master 推送。
