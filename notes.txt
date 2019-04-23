@@ -24,3 +24,5 @@ $ git pull origin master --allow-unrelated-histories
 但是这时会可能会提示必须输入提交的信息，默认会打开vim编辑器，先按 i 切换到插入模式，写完后 Esc→：→wq 即可保存退出编辑器。
 如果不进入vim编辑器，则会自动生成一个合并代码的commit。然后再使用前面的命令push将本地提交推送到远程仓库。
 后面如果本地还有commit，就可以直接用 git push origin master 推送。
+提示:fatal: remote origin already exists.
+git remote rm origin
